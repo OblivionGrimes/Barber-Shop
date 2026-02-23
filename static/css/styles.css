@@ -7,3 +7,18 @@ html, body {
     overflow-x: hidden;
     font-family: 'Funnel Display', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+
+/* -- Aside -- */
+.layout-has-sidebar {
+    --sidebar-width: 288px;
+}
+
+#sidebar {
+    top: var(--header-height) ;
+    height: calc(95vh - var(--header-height)) ;
+    width: 288px ;
+    min-width: 180px ;
+    max-width: 288px ;
+    overflow: visible !important;
+}

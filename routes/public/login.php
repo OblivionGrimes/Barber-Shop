@@ -15,13 +15,13 @@
          
             if($user->getStatus() === 'ativo'){
 
-                header("Location: d/manage/frames/index");
-                //$LoginRepository->logUsuario($_SESSION['logged_user']->getIdUser(), $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], "login");
+                header("Location: d/manage/home/index");
+                $LoginRepository->logUsuario($_SESSION['logged_user']->getIdUser(), $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], "login");
                 exit();
                 
             }else{
                 echo $config->alerta_toast("Sua conta foi desativada, solicite a reativação para acessar sua conta!",2);
-                //$LoginRepository->logUsuario($_SESSION['logged_user']->getIdUser(), $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], "Tentativa de login por user desativado");
+                $LoginRepository->logUsuario($_SESSION['logged_user']->getIdUser(), $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], "Tentativa de login por user desativado");
             }
 
         }else{

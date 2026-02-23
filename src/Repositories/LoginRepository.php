@@ -41,7 +41,7 @@ class LoginRepository extends Database{
     // Invalida a sessão atual e redireciona para a página de login
     public function logUsuario($user_id, $id_address, $user_agente, $acao): void {
         
-        $stmt = $this->mysqlConnection->prepare("INSERT INTO logs_acesso (user_id, acao, ip_address, user_agent) VALUES (?, ?, ?, ?)");
+        $stmt = $this->mysqlConnection->prepare("INSERT INTO logs_acesso (user_id, acao, ip_address, user_agent, data_log) VALUES (?, ?, ?, ?, now())");
         $stmt->execute([$user_id, $acao, $id_address, $user_agente]);
 
     }

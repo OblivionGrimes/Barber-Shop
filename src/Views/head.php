@@ -10,5 +10,5 @@
         <link href="<?= BASE_URL ?>static/css/styles.css" rel="stylesheet"/>
     </head>
     
-    <body class="min-h-screen flex flex-col">
+    <body class="min-h-screen flex flex-col"> 
     
