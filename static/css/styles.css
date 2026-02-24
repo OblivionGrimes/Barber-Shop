@@ -22,3 +22,12 @@ html, body {
     max-width: 288px ;
     overflow: visible !important;
 }
+
+/* -- backgrounds collors -- */
+.bg-grey {
+    background-color: #E0E0E0;
+}
+
+.bg-grey-2 {
+    background-color: #3D3D3D;
+}
